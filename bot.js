@@ -225,7 +225,7 @@ Scire pe chat numarul corespunzator videoclipului pe care vrei sa il asculti `)
              var E8 = new Discord.RichEmbed()
             .setColor("#15f153")
             .addField("b.help-music", '> detalii despre partea legata de muzica')
-            .addField("Add Fresh on your server", '> https://discordapp.com/api/oauth2/authorize?client_id=452117702233030676&permissions=8&scope=bot')
+            .addField("Add MusicBear on your server", '> https://discordapp.com/api/oauth2/authorize?client_id=452117702233030676&permissions=8&scope=bot')
             .setTimestamp();
             message.channel.sendMessage(E8);
             break;
