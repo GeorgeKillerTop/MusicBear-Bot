@@ -55,11 +55,11 @@ if (message.author.bot) return undefined;
                 var video = await youtube.getVideo(url);
             } catch (error) {
                 try {
-                    var videos = await youtube.searchVideos(searchString, 5);
+                    var videos = await youtube.searchVideos(searchString, 3);
                     let index = 0;
                     var E32 = new Discord.RichEmbed()
                 .setColor("#15f153")
-                .addField("Top 10 videoclipuri gasite:", `${videos.map(video2 => `**${++index} -** ${video2.title}`).join('\n')}
+                .addField("Top 3 videoclipuri gasite:", `${videos.map(video2 => `**${++index} -** ${video2.title}`).join('\n')}
 Scire pe chat numarul corespunzator videoclipului pe care vrei sa il asculti `)
                 .setTimestamp();
                     message.channel.send(E32);
