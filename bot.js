@@ -33,7 +33,7 @@ if (message.author.bot) return undefined;
         const voiceChannel = message.member.voiceChannel;
         if (!voiceChannel) {
             var E31 = new Discord.RichEmbed()
-            .setColor("#15f153")
+            .setColor("#ffa31a3")
             .addField("Eroare", "Trebuie sa intri pe un Voice Channel ")
             .setTimestamp();
         return message.channel.send(E31);
@@ -46,7 +46,7 @@ if (message.author.bot) return undefined;
                 await handleVideo(video2, message, voiceChannel, true); 
             }
                 var E31 = new Discord.RichEmbed()
-                .setColor("#15f153")
+                .setColor("#ffa31a3")
                 .addField("✅ Playlist:", `**${playlist.title}** a fost adaugata in playlist`)
                 .setTimestamp();
             return message.channel.send(E31);
@@ -58,7 +58,7 @@ if (message.author.bot) return undefined;
                     var videos = await youtube.searchVideos(searchString, 3);
                     let index = 0;
                     var E32 = new Discord.RichEmbed()
-                .setColor("#15f153")
+                .setColor("#ffa31a3")
                 .addField("Top 3 videoclipuri gasite:", `${videos.map(video2 => `**${++index} -** ${video2.title}`).join('\n')}
 Scire pe chat numarul corespunzator videoclipului pe care vrei sa il asculti `)
                 .setTimestamp();
@@ -72,7 +72,7 @@ Scire pe chat numarul corespunzator videoclipului pe care vrei sa il asculti `)
                     } catch (err) {
                         console.error(err);
                         var E33 = new Discord.RichEmbed()
-                        .setColor("#15f153")
+                        .setColor("#ffa31a3")
                         .addField("Eroare", "Timpul a expiart sau nu ai pus un numar")
                         .setTimestamp();
                          return message.channel.send(E33);
@@ -82,7 +82,7 @@ Scire pe chat numarul corespunzator videoclipului pe care vrei sa il asculti `)
                 } catch (err) {
                     console.error(err);
                     var E34 = new Discord.RichEmbed()
-                    .setColor("#15f153")
+                    .setColor("#ffa31a3")
                     .addField("Eroare", "Mention owener")
                     .setTimestamp();
                 return message.channel.send(E34);
@@ -95,7 +95,7 @@ Scire pe chat numarul corespunzator videoclipului pe care vrei sa il asculti `)
         const voiceChannel2 = message.member.voiceChannel;
     if (!voiceChannel2) {
         var E31 = new Discord.RichEmbed()
-        .setColor("#15f153")
+        .setColor("#ffa31a3")
         .addField("Eroare", "Trebuie sa intri pe un Voice Channel ")
         .setTimestamp();
     return message.channel.send(E31);
@@ -107,14 +107,14 @@ Scire pe chat numarul corespunzator videoclipului pe care vrei sa il asculti `)
         case "stop" :
         if (!message.member.voiceChannel) {
             var E38 = new Discord.RichEmbed()
-            .setColor("#15f153")
+            .setColor("#ffa31a3")
             .addField("Eroare", "Trebuie sa intri pe un Voice Channel ")
             .setTimestamp();
         return message.channel.send(E38);
         }
         if (!serverQueue) {
             var E40 = new Discord.RichEmbed()
-            .setColor("#15f153")
+            .setColor("#ffa31a3")
             .addField("Eroare", "MusicBear nu este pe un Voice Channel")
             .setTimestamp();
             return message.channel.send(E40);
@@ -123,7 +123,7 @@ Scire pe chat numarul corespunzator videoclipului pe care vrei sa il asculti `)
         var server = servers[message.guild.id];
         if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect();
                 var E39 = new Discord.RichEmbed()
-            .setColor("#15f153")
+            .setColor("#ffa31a3")
             .addField("MusicBear s-a deconectat",":x:")
             .setTimestamp();
             message.channel.sendMessage(E39);       
@@ -131,21 +131,21 @@ Scire pe chat numarul corespunzator videoclipului pe care vrei sa il asculti `)
         case "volume" :
         if (!message.member.voiceChannel) {
             var E41 = new Discord.RichEmbed()
-            .setColor("#15f153")
+            .setColor("#ffa31a3")
             .addField("Eroare", "Trebuie sa intri pe un Voice Channel ")
             .setTimestamp();
         return message.channel.send(E41);
         }
 		if (!serverQueue) {
             var E42 = new Discord.RichEmbed()
-            .setColor("#15f153")
+            .setColor("#ffa31a3")
             .addField("Eroare", "MusicBear nu este pe un Voice Channel")
             .setTimestamp();
             return message.channel.send(E42);
         }
         if (!args[1]) {
             var E40 = new Discord.RichEmbed()
-            .setColor("#15f153")
+            .setColor("#ffa31a3")
             .addField("Volum:", `Volumul actiual este **${serverQueue.volume}**`)
             .setTimestamp();
             return message.channel.send(E40);
@@ -154,7 +154,7 @@ Scire pe chat numarul corespunzator videoclipului pe care vrei sa il asculti `)
         serverQueue.connection.dispatcher.setVolumeLogarithmic(args[1] / 5);
         {
             var E40 = new Discord.RichEmbed()
-            .setColor("#15f153")
+            .setColor("#ffa31a3")
             .addField("Volum:", `Volumul a fost setat la **${args[1]}**`)
             .setTimestamp();
             return message.channel.send(E40);
@@ -163,26 +163,26 @@ Scire pe chat numarul corespunzator videoclipului pe care vrei sa il asculti `)
         case "now-playing" :
         if (!serverQueue) {
             var E44 = new Discord.RichEmbed()
-            .setColor("#15f153")
+            .setColor("#ffa31a3")
             .addField("Eroare", "Playlistul e gol")
             .setTimestamp();
             return message.channel.send(E44);
         }
             var E45 = new Discord.RichEmbed()
-            .setColor("#15f153")
+            .setColor("#ffa31a3")
             .addField("Now playing:", `**${serverQueue.songs[0].title}**`);
             return message.channel.send(E45);
             break;
         case "playlist" :
         if (!serverQueue) {
             var E43 = new Discord.RichEmbed()
-            .setColor("#15f153")
+            .setColor("#ffa31a3")
             .addField("Eroare", "Playlistul e gol")
             .setTimestamp();
             return message.channel.send(E43);
         }
         var E45 = new Discord.RichEmbed()
-            .setColor("#15f153")
+            .setColor("#ffa31a3")
             .addField("**Playlist:**", `${serverQueue.songs.map(song => `**-** ${song.title}`).join('\n')}
             
 **Now playing:** ${serverQueue.songs[0].title}
@@ -194,13 +194,13 @@ Scire pe chat numarul corespunzator videoclipului pe care vrei sa il asculti `)
 			serverQueue.playing = false;
             serverQueue.connection.dispatcher.pause();
                 var E47 = new Discord.RichEmbed()
-                .setColor("#15f153")
+                .setColor("#ffa31a3")
                 .addField("Pause", ` ${serverQueue.songs[0].title} a fost pus pe pauza`)
                 .setTimestamp();
                 return message.channel.send(E47);
 		}
             var E46 = new Discord.RichEmbed()
-            .setColor("#15f153")
+            .setColor("#ffa31a3")
             .addField("Eroare", "MusicBear nu este pe un Voice Channel")
             .setTimestamp();
             return message.channel.send(E46);
@@ -210,20 +210,20 @@ Scire pe chat numarul corespunzator videoclipului pe care vrei sa il asculti `)
 			serverQueue.playing = true;
 			serverQueue.connection.dispatcher.resume();
             var E48 = new Discord.RichEmbed()
-                .setColor("#15f153")
+                .setColor("#ffa31a3")
                 .addField("Resume", `Se continua videoclipul ${serverQueue.songs[0].title}`)
                 .setTimestamp();
                 return message.channel.send(E48);
 		}
         var E51 = new Discord.RichEmbed()
-            .setColor("#15f153")
+            .setColor("#ffa31a3")
             .addField("Eroare", "MusicBear nu este pe un Voice Channel")
             .setTimestamp();
             return message.channel.send(E51);
             break;
         case "help" :
              var E8 = new Discord.RichEmbed()
-            .setColor("#15f153")
+            .setColor("#ffa31a3")
             .addField("b.help-music", '> detalii despre partea legata de muzica')
             .addField("Add MusicBear on your server", '> https://discordapp.com/api/oauth2/authorize?client_id=452117702233030676&permissions=8&scope=bot')
             .setTimestamp();
@@ -231,7 +231,7 @@ Scire pe chat numarul corespunzator videoclipului pe care vrei sa il asculti `)
             break;
         case "help-music" :
              var E9 = new Discord.RichEmbed()
-            .setColor("#15f153")
+            .setColor("#ffa31a3")
             .addField("b.play ", '> Comanda pentru a asculta muzica')
             .addField("b.skip", '> Comanda pentru a da skip la urmatoarea pesa din playlist')
             .addField("b.stop", '> Comanda pentru a opri Muzica')
@@ -244,7 +244,7 @@ Scire pe chat numarul corespunzator videoclipului pe care vrei sa il asculti `)
             break;
         default:
         var T = new Discord.RichEmbed()
-        .setColor("#15f153")
+        .setColor("#ffa31a3")
         .addField("Comanda invalida",'Incearca b.help')
         message.channel.sendMessage(T); 
     }
@@ -285,7 +285,7 @@ async function handleVideo(video, msg, voiceChannel, playlist = false) {
 		if (playlist) return undefined;
         else  {
         var E35 = new Discord.RichEmbed()
-        .setColor("#15f153")
+        .setColor("#ffa31a3")
         .addField(":white_check_mark: Playlist:", `**${song.title}** a fost adougata in playlist`)
         .setTimestamp();
          return msg.channel.send(E35)
@@ -315,7 +315,7 @@ function play(guild, song , message , channel) {
     dispatcher.setVolumeLogarithmic(serverQueue.volume / 5);
     
         var E50 = new Discord.RichEmbed()
-        .setColor("#15f153")
+        .setColor("#ffa31a3")
         .addField("Now Playing", `**${song.title}** `)
         .setTimestamp();
         serverQueue.textChannel.send(E50)
