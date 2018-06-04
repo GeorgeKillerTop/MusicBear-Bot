@@ -222,15 +222,7 @@ Scire pe chat numarul corespunzator videoclipului pe care vrei sa il asculti `)
             return message.channel.send(E51);
             break;
         case "help" :
-             var E8 = new Discord.RichEmbed()
-            .setColor("#F7941E")
-            .addField("b.help-music", '> detalii despre partea legata de muzica')
-            .addField("Add MusicBear on your server", '> https://discordapp.com/api/oauth2/authorize?client_id=452117702233030676&permissions=8&scope=bot')
-            .setTimestamp();
-            message.channel.sendMessage(E8);
-            break;
-        case "help-music" :
-             var E9 = new Discord.RichEmbed()
+            var E9 = new Discord.RichEmbed()
             .setColor("#F7941E")
             .addField("b.play ", '> Comanda pentru a asculta muzica')
             .addField("b.skip", '> Comanda pentru a da skip la urmatoarea pesa din playlist')
@@ -239,6 +231,7 @@ Scire pe chat numarul corespunzator videoclipului pe care vrei sa il asculti `)
             .addField("b.now-playing", '> Comanda pentru a vedea ce melodie se reda')
             .addField("b.pause", '> Comanda pentru a pune pe pauza muzica')
             .addField("b.resume", '> Comanda pentru a relua muzica')
+            .addField("Add MusicBear on your server", '> https://discordapp.com/api/oauth2/authorize?client_id=452117702233030676&permissions=8&scope=bot')
             .setTimestamp();
             message.channel.sendMessage(E9);
             break;
