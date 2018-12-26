@@ -1,24 +1,24 @@
 {
-  "name": "MusicBear",
-  "description": "Budgie bot",
-  "version": "0.0.0",
+  "name": "cristalvic-bot-master",
+  "version": "1.0.0",
+  "description": "",
   "main": "bot.js",
   "scripts": {
-    "start": "node bot.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "discord.js": "^11.3.2",
-    "discord.js-arbitrary-ffmpeg": "^1.0.0",
-    "discord.js-musicbot-addon": "^1.10.2",
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+    "discord.js": "^11.4.2",
     "ffmpeg": "0.0.4",
-    "ffmpeg-binaries": "^3.2.2",
+    "ffmpeg-binaries": "^4.0.0",
     "moment": "^2.22.2",
     "ms": "^2.1.1",
     "node-script": "^0.1.3",
     "opusscript": "0.0.6",
-    "request": "^2.85.0",
-    "simple-youtube-api": "^5.0.1",
+    "request": "^2.88.0",
+    "simple-youtube-api": "^5.0.2",
     "youtube-info": "^1.2.0",
-    "ytdl-core": "^0.20.2"
+    "ytdl-core": "^0.24.0"
   }
 }
