@@ -13,7 +13,7 @@ var servers = {};
 
 bot.on("ready", function() {
     console.log("Ready");
-    bot.user.setGame(`on ${bot.guilds.size} servers!`)
+    bot.user.setGame(`pe RoRoleplay`)
 });
 
 bot.on("message", async message => {
