@@ -1,5 +1,5 @@
 {
-  "name": "Budgie",
+  "name": "MusicBear",
   "description": "Budgie bot",
   "version": "0.0.0",
   "main": "bot.js",
@@ -12,6 +12,7 @@
     "discord.js-musicbot-addon": "^1.10.2",
     "ffmpeg": "0.0.4",
     "ffmpeg-binaries": "^3.2.2",
+    "moment": "^2.22.2",
     "ms": "^2.1.1",
     "node-script": "^0.1.3",
     "opusscript": "0.0.6",
